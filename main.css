@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+}
+
+#websiteHeader {
+    text-align: center;
+}
+
+#slideshow {
+    background-color: #CCC;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 75%;
+    text-align: center;
+    position: relative;
+}
+
+.slideImg {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    height: 100%;
+}
+
+#prev, #next {
+    height: 30px;
+}
+
+#prev {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 0px;
+}
+
+#next {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    right: 0px;
+}
+
+#dotDivOuter {
+    text-align: center;
+}
+
+#dotDivInner {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dot {
+    display: inline;
+    height: 10px;
+    font-size: 100px;
+    line-height: 1px;
+}

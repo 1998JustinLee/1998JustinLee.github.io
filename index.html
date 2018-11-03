@@ -2,11 +2,35 @@
 <html lang="en-US">
     <head>
       <meta charset="UTF-8">
-      <!-- <link rel="stylesheet" href="stylesheets/style.css"> -->
-      <!-- <script src="javascripts/login.js"></script> -->
+      <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <p>Hello</p>
+        <h1 id="websiteHeader">Justin Lee</h1>
+        <hr>
+
+        <div id="slideshow">
+            <img class="slideImg" src="./images/isnt_there_another_way.png" alt="Dog">
+            <img class="slideImg" src="./images/cat_dog_man_new_text.png" alt="Cat Dog Man">
+            <img class="slideImg" src="./images/telecommunications.png" alt="Telecommunications">
+            <img class="slideImg" src="./images/cheese.png" alt="Cheese">
+            <img class="slideImg" src="./images/dinosaurs.png" alt="Dinosaur">
+            <img class="slideImg" src="./images/many_beans.png" alt="Beans">
+
+            <button id="prev" onclick="slideshowButton(-1)"><</button>
+            <button id="next" onclick="slideshowButton(1)">></button>
+        </div>
+
+        <div id="dotDivOuter">
+            <divid="dotDivInner">
+                <span class="dot" onclick="showDivsDots(1)">.</span>
+                <span class="dot" onclick="showDivsDots(2)">.</span>
+                <span class="dot" onclick="showDivsDots(3)">.</span>
+                <span class="dot" onclick="showDivsDots(4)">.</span>
+                <span class="dot" onclick="showDivsDots(5)">.</span>
+                <span class="dot" onclick="showDivsDots(6)">.</span>
+            </div>
+        </div>
 
     </body>
+    <script src="main.js"></script>
 </html>
