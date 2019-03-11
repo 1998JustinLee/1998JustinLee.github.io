@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: #ebe9e7;
 }
 
 h3 {
@@ -8,11 +9,26 @@ h3 {
 
 h2 {
   margin-top: 0px;
+  font-family: "Roboto";
 }
 
-.mainBr {
-  display: block;
-  margin: 20px;
+#header {
+  text-align: center;
+  font-family: "Roboto";
+}
+
+#details {
+  text-align: center;
+}
+
+#headerA {
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto";
+}
+
+#headerEmail {
+  font-family: "Roboto";
 }
 
 .mainA {
@@ -20,19 +36,28 @@ h2 {
   color: black;
 }
 
-#header {
-  text-align: center;
+/* Project grid cell */
+.cell{
+  background-color: #FFF;
 }
 
-#headerA {
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    color: black;
+.cell p{
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-#bodyDiv {
-  padding: 20px;
+.cell h3{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.cell span{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.disclaimer {
+  font-family: "Roboto";
 }
 
 .spanLang {

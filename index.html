@@ -3,47 +3,121 @@
     <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="./main.css">
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+      <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+      <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </head>
     <body>
         <h1 id="header"><a class="mainA" href="https://1998justinlee.github.io/">Justin Lee</a></h1>
-        <a id="headerA" target="_blank" href="https://github.com/1998JustinLee">https://github.com/1998JustinLee</a>
-        <a id="headerA" href="./grades.html">Academic Results</a>
-        <hr>
+        <div id="details">
+          <span id="headerEmail"><a id="headerA" target="_blank" href="https://github.com/1998JustinLee">https://github.com/1998JustinLee</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1998JustinLee@gmail.com</span>
+        </div>
 
-        <div id="bodyDiv">
+        <div>
 
-          <h2>Projects</h2>
+          <div class="mdc-layout-grid">
+            <h2>Projects</h2>
 
-          <h3>Hangman</h3>
-          <span class="spanLang">Python3</span>
-          <a target="_blank" href="https://github.com/1998JustinLee/PythonHangman">Github</a>
-          <p>Command line Hangman game.</p>
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell cell">
+                <h3 class="mdc-typography--headline6">Hangman</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
+                <p class="mdc-typography mdc-typography--body2">Command line Hangman game.<br><br>
+                  This is one of the first things I made after completing an online Python course.
+                </p>
 
-          <h3>Tic Tac Toe</h3>
-          <span class="spanLang">Python3</span>
-          <a target="_blank" href="https://github.com/1998JustinLee/PythonTicTacToe">Github</a>
-          <p>Command line Tic Tac Toe game against AI.</p>
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/PythonHangman">Github</a>
+                </div>
+              </div>
 
-          <br class="mainBr">
+              <div class="mdc-layout-grid__cell cell">
+                <h3 class="mdc-typography--headline6">Tic Tac Toe</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
+                <p class="mdc-typography mdc-typography--body2">Command line Tic Tac Toe game against AI.<br><br>
+                  I made this immediately after my hangman game, with my main goal being to make an "AI" to play against.
+                  The result was that the code became very confusing and the AI's logic has been lost forever.
+                </p>
 
-          <h2>Project Contribution</h2>
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/PythonTicTacToe">Github</a>
+                </div>
+              </div>
 
-          <h3>Hotel Booking Website</h3>
-          <span class="spanLang">Javascript, NodeJS, MYSQL</span>
-          <a target="_blank" href="https://github.com/davidhin/letoh">Github</a>
-          <p>Prototype Hotel Booking Website using Google Maps API.</p>
+            </div>
+          </div>
 
-          <h3>Smart Parking App</h3>
-          <span class="spanLang">Javascript, NodeJS, MYSQL</span>
-          <a target="_blank" href="https://github.com/davidhin/SmartParking">Github</a>
-          <p>Prototype Smart Parking Mobile App using Google Maps API.<br>Smart Parking aims to reduce congestion caused by circling drivers by helping them find parking quicker. This is a prototpye of a mobile app for a Smart Parking System which uses sensors in parking spaces to detect whether it is occupied or not. The system allows for drivers to search and view available parking spaces. This project was completed for Comp Sci 2206 in 2018.<br><br>Demo video: https://www.youtube.com/watch?v=atzXlpRFBZ4&feature=youtu.be&fbclid=IwAR2qm2GLOBDeHxsRhmTJNrv80R0O329iYKWoACFDtgK0bCU6h014gGSH5Yc</p>
+          <div class="mdc-layout-grid">
+            <h2>University Projects</h2>
+            <p class="disclaimer">* Marked projects where done in a group</p>
 
-          <h3>Travelling Thief</h3>
-          <span class="spanLang">C++</span>
-          <a target="_blank" href="https://github.com/davidhin/travellingthief">Github</a>
-          <p>Solution to Travelling Thief problem.</p>
+            <div class="mdc-layout-grid__inner">
 
-          <br class="mainBr">
+              <div class="mdc-layout-grid__cell cell">
+                <h3 class="mdc-typography--headline6">Hotel Booking Website *</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">Javascript, NodeJS, MySQL</span>
+                <p class="mdc-typography mdc-typography--body2">Prototype Hotel Booking Website using Google Maps API.<br><br>
+                  We tried to build a hotel booking website with the ability to view, search, select, book and review
+                  hotels from a MySQL database.
+                  This project was completed for Comp Sci 2207 Web & Database Computing in 2018.
+                </p>
+
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/letoh">Github</a>
+                </div>
+              </div>
+
+              <div class="mdc-layout-grid__cell--span-8 cell">
+                <h3 class="mdc-typography--headline6">Smart Parking App *</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">Javascript, NodeJS, MySQL</span>
+                <p class="mdc-typography mdc-typography--body2">Prototype Smart Parking Mobile App using Google Maps API.<br><br>
+                  Smart Parking aims to reduce congestion caused by circling drivers by helping them find parking quicker.
+                  This is a prototpye of a mobile app for a Smart Parking System which uses sensors in parking spaces to detect
+                  whether it is occupied or not. The system allows for drivers to search and view available parking spaces.
+                  This project was completed for Comp Sci 2206 Software Engineering Workshop II in 2018.
+                </p>
+
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/SmartParking">Github</a>
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://www.youtube.com/watch?v=atzXlpRFBZ4&feature=youtu.be&fbclid=IwAR2qm2GLOBDeHxsRhmTJNrv80R0O329iYKWoACFDtgK0bCU6h014gGSH5Yc">Demo Video</a>
+                </div>
+              </div>
+
+              <div class="mdc-layout-grid__cell cell">
+                <h3 class="mdc-typography--headline6">Travelling Thief *</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">C++</span>
+                <p class="mdc-typography mdc-typography--body2">Solution to The Travelling Thief problem.<br><br>
+                  The Travelling Thief problem is a combination of the Travelling Salesman and Knapsack problem.
+                  A thief has to find the optimal route to take and which items to steal along the way  - having
+                  to deal with the weight along the way. The provided paper was the basis for our solution to the
+                  problem.
+                  This project was completed for Comp Sci 2203 Problem Solving & Software Development in 2018.
+                </p>
+
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/travellingthief">Github</a>
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://cs.adelaide.edu.au/~optlog/research/ttp/2015gecco-ttp.pdf">Paper</a>
+                </div>
+              </div>
+
+              <div class="mdc-layout-grid__cell cell">
+                <h3 class="mdc-typography--headline6">Shelter Animal Outcomes *</h3>
+                <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
+                <p class="mdc-typography mdc-typography--body2">Machine Learning Shelter Animal Outcome Prediction<br><br>
+                  Using machine learning techniques to try and determine the outcome of a cats & dogs
+                  in an animal shelter. We got our data from the provided Kaggle page.
+                  This project was completed for Comp Sci 2201 Algorithm & Data Structure Analysis in 2018.
+                </p>
+
+                <div class="mdc-card__action-icons">
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/Animal-Shelter-Outcomes">Github</a>
+                  <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://www.kaggle.com/c/shelter-animal-outcomes">Kaggle</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
         </div>
 
