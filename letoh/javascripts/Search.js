@@ -2,6 +2,100 @@ var hotels = [];
 var filtered = [];
 var distances = [];
 
+var map = null;
+
+// Init map
+function initMap() {
+  var adl = {lat: -34.9284989, lng: 138.6007456};
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: adl,
+    streetViewControl: true,
+    streetViewControlOptions: {
+      position: google.maps.ControlPosition.RIGHT_CENTER
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.RIGHT_CENTER
+    }
+
+  });
+
+  //---------- Place autocomplete testing ----------//
+  var input = document.getElementById('mainSearch');
+  var autocomplete = new google.maps.places.Autocomplete(input);
+
+  // Bind the map's bounds (viewport) property to the autocomplete object,
+  // so that the autocomplete requests use the current map bounds for the
+  // bounds option in the request.
+  autocomplete.bindTo('bounds', map);
+
+  autocomplete.addListener('place_changed', function() {
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      // User entered the name of a Place that was not suggested and
+      // pressed the Enter key, or the Place Details request failed.
+      window.alert("No details available for input: '" + place.name + "'");
+      return;
+    }
+
+
+    // If the place has a geometry, then present it on a map.
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
+      console.log(place.geometry.location.lat());
+      console.log(place.geometry.location.lng());
+    } else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);  // Why 17? Because it looks good.
+    }
+
+
+    var address = '';
+    if (place.address_components) {
+      address = [
+        (place.address_components[0] && place.address_components[0].short_name || ''),
+        (place.address_components[1] && place.address_components[1].short_name || ''),
+        (place.address_components[2] && place.address_components[2].short_name || '')
+      ].join(' ');
+    }
+  });
+
+}
+
+function includeHTML() {
+  "use strict";
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("data-w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("data-w3-include-html");
+          includeHTML();
+        }
+      };
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+
 // ====================== MAIN FUNCTIONS ===================== //
 
 $(document).ready(function() {
@@ -385,4 +479,48 @@ function mapGeneral() {
   $('#map').toggle(function() {
     currentView = 0;
   });
+}
+
+// ====================== Overlay functions =================== //
+function hilton() {
+  $('div#hilton_overlay').fadeIn();
+}
+function hiltonhide() {
+  $('div#hilton_overlay').fadeOut();
+}
+function mantra() {
+  $('div#mantra_overlay').fadeIn();
+}
+function mantracl() {
+  $('div#mantra_overlay').fadeOut();
+}
+function ibis() {
+  $('div#ibis_overlay').fadeIn();
+}
+function ibiscl() {
+  $('div#ibis_overlay').fadeOut();
+}
+function paradise() {
+  $('div#paradise_overlay').fadeIn();
+}
+function paradisecl() {
+  $('div#paradise_overlay').fadeOut();
+}
+function letoh() {
+  $('div#letoh_overlay').fadeIn();
+}
+function letohcl() {
+  $('div#letoh_overlay').fadeOut();
+}
+function manager() {
+  $('div#manager_overlay').fadeIn();
+}
+function managercl() {
+  $('div#manager_overlay').fadeOut();
+}
+function interesting() {
+  $('div#interesting_overlay').fadeIn();
+}
+function interestingcl() {
+  $('div#interesting_overlay').fadeOut();
 }
