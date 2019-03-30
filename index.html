@@ -4,37 +4,42 @@
       <meta charset="UTF-8">
       <link rel="stylesheet" href="./main.css">
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
       <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
       <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </head>
     <body>
-        <h1 id="header"><a class="mainA" href="https://1998justinlee.github.io/">Justin Lee</a></h1>
-        <div id="details">
-          <span id="headerEmail"><a id="headerA" target="_blank" href="https://github.com/1998JustinLee">Github</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1998JustinLee@gmail.com
-            <a id="headerA" target="_blank" href="https://www.linkedin.com/in/1998justinlee/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinkedIn</a>
-          </span>
+        <div id="header">
+          <h1 id="title"><a id="mainA" href="https://1998justinlee.github.io/">Justin Lee</a></h1>
+          <div id="details">
+            <span id="headerLinks">
+              <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee">Github</a>
+              <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://www.linkedin.com/in/1998justinlee/">LinkedIn</a>
+            </span>
+          </div>
         </div>
 
-        <div>
+        <div id="mainBody">
 
           <div class="mdc-layout-grid">
             <h2>Projects</h2>
 
             <div class="mdc-layout-grid__inner">
-              <div class="mdc-layout-grid__cell cell">
+              <div class="mdc-layout-grid__cell--span-12 cell">
                 <h3 class="mdc-typography--headline6">Hangman</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
                 <p class="mdc-typography mdc-typography--body2">Command line Hangman game.<br><br>
                   This is one of the first things I made after completing an online Python course.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/PythonHangman">Github</a>
                 </div>
               </div>
 
-              <div class="mdc-layout-grid__cell cell">
+              <div class="mdc-layout-grid__cell--span-12 cell">
                 <h3 class="mdc-typography--headline6">Tic Tac Toe</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
                 <p class="mdc-typography mdc-typography--body2">Command line Tic Tac Toe game against AI.<br><br>
@@ -42,22 +47,24 @@
                   The result was that the code became very confusing and the AI's logic has been lost forever.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/PythonTicTacToe">Github</a>
                 </div>
               </div>
 
             </div>
-          </div>
 
-          <div class="mdc-layout-grid">
+            <br>
+
             <h2>University Projects</h2>
-            <p class="disclaimer">* Marked projects where done in a group</p>
+            <p class="disclaimer">* Marked projects were done in a group</p>
 
             <div class="mdc-layout-grid__inner">
 
-              <div class="mdc-layout-grid__cell cell">
-                <h3 class="mdc-typography--headline6">Hotel Booking Website *</h3>
+              <div class="mdc-layout-grid__cell--span-12 cell">
+                <h3 class="mdc-typography--headline6" title="Group Members:&#013;Justin Lee&#013;David Hin&#013;Callum Martin">Hotel Booking Website *</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">Javascript, NodeJS, MySQL</span>
                 <p class="mdc-typography mdc-typography--body2">Prototype Hotel Booking Website using Google Maps API.<br><br>
                   We tried to build a hotel booking website with the ability to view, search, select, book and review
@@ -65,14 +72,16 @@
                   This project was completed for Comp Sci 2207 Web & Database Computing in 2018.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/letoh">Github</a>
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="letoh/index.html">Static Demo</a>
                 </div>
               </div>
 
-              <div class="mdc-layout-grid__cell--span-8 cell">
-                <h3 class="mdc-typography--headline6">Smart Parking App *</h3>
+              <div class="mdc-layout-grid__cell--span-12 cell">
+                <h3 class="mdc-typography--headline6" title="Group Members:&#013;Justin Lee&#013;David Hin&#013;Parthey Bhatt&#013;Josh Wright">Smart Parking App *</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">Javascript, NodeJS, MySQL</span>
                 <p class="mdc-typography mdc-typography--body2">Prototype Smart Parking Mobile App using Google Maps API.<br><br>
                   Smart Parking aims to reduce congestion caused by circling drivers by helping them find parking quicker.
@@ -81,14 +90,16 @@
                   This project was completed for Comp Sci 2206 Software Engineering Workshop II in 2018.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/SmartParking">Github</a>
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://www.youtube.com/watch?v=atzXlpRFBZ4&feature=youtu.be&fbclid=IwAR2qm2GLOBDeHxsRhmTJNrv80R0O329iYKWoACFDtgK0bCU6h014gGSH5Yc">Demo Video</a>
                 </div>
               </div>
 
-              <div class="mdc-layout-grid__cell cell">
-                <h3 class="mdc-typography--headline6">Travelling Thief *</h3>
+              <div class="mdc-layout-grid__cell--span-12 cell">
+                <h3 class="mdc-typography--headline6" title="Group Members:&#013;Justin Lee&#013;David Hin">Travelling Thief *</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">C++</span>
                 <p class="mdc-typography mdc-typography--body2">Solution to The Travelling Thief problem.<br><br>
                   The Travelling Thief problem is a combination of the Travelling Salesman and Knapsack problem.
@@ -98,14 +109,16 @@
                   This project was completed for Comp Sci 2203 Problem Solving & Software Development in 2018.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/davidhin/travellingthief">Github</a>
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://cs.adelaide.edu.au/~optlog/research/ttp/2015gecco-ttp.pdf">Paper</a>
                 </div>
               </div>
 
-              <div class="mdc-layout-grid__cell cell">
-                <h3 class="mdc-typography--headline6">Shelter Animal Outcomes *</h3>
+              <div class="mdc-layout-grid__cell--span-12 cell">
+                <h3 class="mdc-typography--headline6" title="Group Members:&#013;Justin Lee&#013;David Hin&#013;Callum Martin&#013;Josh Wright&#013;Dan Bruer">Shelter Animal Outcomes *</h3>
                 <span class="mdc-typography mdc-typography--subtitle2">Python3</span>
                 <p class="mdc-typography mdc-typography--body2">Machine Learning Shelter Animal Outcome Prediction<br><br>
                   Using machine learning techniques to try and determine the outcome of a cats & dogs
@@ -113,7 +126,9 @@
                   This project was completed for Comp Sci 2201 Algorithm & Data Structure Analysis in 2018.
                 </p>
 
-                <div class="mdc-card__action-icons">
+                <br><br>
+
+                <div class="mdc-card__action-icons cellButtons">
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://github.com/1998JustinLee/Animal-Shelter-Outcomes">Github</a>
                   <a class="mdc-button mdc-card__action mdc-card__action--button" target="_blank" href="https://www.kaggle.com/c/shelter-animal-outcomes">Kaggle</a>
                 </div>
@@ -122,6 +137,10 @@
             </div>
           </div>
 
+        </div>
+
+        <div id="footer">
+          <span>1998JustinLee@gmail.com</span>
         </div>
 
     </body>

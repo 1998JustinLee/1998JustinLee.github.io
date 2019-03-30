@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  background-color: #ebe9e7;
+  background-color: #fff6aa;
 }
 
 h3 {
@@ -9,12 +9,26 @@ h3 {
 
 h2 {
   margin-top: 0px;
-  font-family: "Roboto";
+  font-family: "Bitter", Tahoma, Sans-Serif;
+  text-align: center;
+}
+
+#mainBody {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 #header {
+  background-color: #e5dd97;
+  margin: 0px;
+  padding-bottom: 25px;
+}
+
+#title {
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Bitter", Tahoma, Sans-Serif;
+  margin-top:0px;
+  padding-top: 25px;
 }
 
 #details {
@@ -27,37 +41,61 @@ h2 {
     font-family: "Roboto";
 }
 
-#headerEmail {
+#headerLinks {
   font-family: "Roboto";
 }
 
-.mainA {
+#mainA {
   text-decoration: none;
   color: black;
 }
 
+#mainA:hover {
+  color: #5e5b3e;
+}
+
+#footer {
+  width:100%;
+  height: 50px;
+  background-color: #e5dd97;
+  text-align: center;
+  padding-top: 25px;
+  font-family: "Roboto", Tahoma, Sans-Serif;
+  color: #5e5b3e;
+}
+
 /* Project grid cell */
-.cell{
-  background-color: #FFF;
+.cell {
+  background-color: #fffded;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.cell p{
+.cell p {
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.cell h3{
+.cell h3 {
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.cell span{
+.cell span {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.cellButtons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .disclaimer {
-  font-family: "Roboto";
+  font-family: "Roboto", Tahoma, Sans-Serif;
+  text-align: center;
 }
 
 .spanLang {
@@ -66,4 +104,29 @@ h2 {
 
 .gradeTableH {
   text-align: left;
+}
+
+/* ================== DESKTOP ===================== */
+@media screen and (min-width: 1025px) {
+  #mainBody {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+/* =================== TABLET ===================== */
+@media screen and (max-width: 1024px) {
+  #mainBody {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+/* ================== MOBILE ====================== */
+
+@media screen and (max-width: 480px) {
+  #mainBody {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
