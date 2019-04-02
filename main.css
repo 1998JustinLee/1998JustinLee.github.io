@@ -11,6 +11,7 @@ h2 {
   margin-top: 0px;
   font-family: "Bitter", Tahoma, Sans-Serif;
   text-align: center;
+  font-size: 1.75em;
 }
 
 #mainBody {
@@ -39,6 +40,7 @@ h2 {
     text-decoration: none;
     color: black;
     font-family: "Roboto";
+    font-size: 1em;
 }
 
 #headerLinks {
@@ -62,6 +64,10 @@ h2 {
   padding-top: 25px;
   font-family: "Roboto", Tahoma, Sans-Serif;
   color: #5e5b3e;
+}
+
+.mdc-card__action--button {
+  font-size: 1em !important;
 }
 
 /* Project grid cell */
