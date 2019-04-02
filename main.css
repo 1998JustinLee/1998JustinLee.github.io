@@ -135,4 +135,21 @@ h2 {
     margin-left: 0;
     margin-right: 0;
   }
+  .cell p {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .cell h3 {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .cell span {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .mdc-card__action--button {
+    font-size: 2em !important;
+  }
 }
