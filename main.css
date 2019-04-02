@@ -79,18 +79,18 @@ h2 {
 }
 
 .cell p {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
 }
 
 .cell h3 {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
 }
 
 .cell span {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
 }
 
 .cellButtons {
