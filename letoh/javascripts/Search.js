@@ -1,6 +1,7 @@
 var hotels = [];
 var filtered = [];
 var distances = [];
+var markers = [];
 
 var map = null;
 
@@ -61,6 +62,166 @@ function initMap() {
     }
   });
 
+  // Clear map
+  clearMarkers();
+
+  // Populate map
+  addMarkers();
+}
+
+function clearMarkers() {
+   for (let i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers = [];
+}
+
+filtered = [
+  {
+  'pos_lat': -34.9224989,
+  'pos_lng': 138.6067456,
+  'price': 160,
+  'rating': 2,
+  'main_image': 1,
+  'name': "Hilton Adelaide"
+  },
+  {
+  'pos_lat': -34.9384989,
+  'pos_lng': 138.6007456,
+  'price': 1200,
+  'rating': 3,
+  'main_image': 2,
+  'name': "Mantra Hindmarsh Square"
+  },
+  {
+  'pos_lat': -34.9184989,
+  'pos_lng': 138.6007456,
+  'price': 420,
+  'rating': 2,
+  'main_image': 3,
+  'name': "Ibis Adelaide"
+  },
+  {
+  'pos_lat': -34.9284989,
+  'pos_lng': 138.6007456,
+  'price': 20,
+  'rating': 4,
+  'main_image': 4,
+  'name': "Paradise Interchange Hotel"
+  },
+  {
+  'pos_lat': -34.9244989,
+  'pos_lng': 138.6007456,
+  'price': 9,
+  'rating': 1,
+  'main_image': 5,
+  'name': "Letoh Hotel"
+  },
+  {
+  'pos_lat': -34.9284989,
+  'pos_lng': 138.5907456,
+  'price': 1000,
+  'rating': 6,
+  'main_image': 55,
+  'name': "Manager Exclusive Hotel"
+  },
+  {
+  'pos_lat': -34.9284989,
+  'pos_lng': 138.6089456,
+  'price': 10,
+  'rating': 1,
+  'main_image': 54,
+  'name': "Interesting Hotel"
+  }
+]
+
+// Populate map with markers from hotels array info
+function addMarkers() {
+  // Loop over hotels array
+  var icons;
+  for (let i = 0; i < filtered.length; i++) {
+
+    icons = {
+      url: "images/marker.png", // url
+  	  scaledSize: new google.maps.Size(54, 30), // scaled size
+  	  origin: new google.maps.Point(0,0), // origin
+  	  anchor: new google.maps.Point(0, 0), // anchor
+      labelOrigin: new google.maps.Point(26,13) //label position
+  	};
+
+    // Create new marker
+
+    var marker = new google.maps.Marker({
+      position: {lat: filtered[i].pos_lat, lng: filtered[i].pos_lng},
+      icon: icons,
+      label: {
+        text: "$"+filtered[i].price.toString(),
+        color: "#000000",
+        fontSize: "16px",
+        fontWeight: "bold",
+      },
+      zIndex: i,
+      map: map
+    });
+
+    //Infowindow made here
+
+    infowindow = new google.maps.InfoWindow({
+      minWidth: 200
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      //Rating System
+      var stars = "";
+      if(filtered[i].rating==6){
+        stars = "No ratings";
+      }else{
+        for(var j=0;j<filtered[i].rating;j++){
+          stars += "&#10029;";
+        }
+        for(var k=filtered[i].rating;k<5;k++){
+          stars += "&#10025;";
+        }
+      }
+
+      infowindow.setContent(
+        '<div style="min-width:200px;min-height:100px;margin-top:5px">'+
+        '<div style="float:left">'+
+        '<img src="'+
+        'images/'+filtered[i].main_image+
+        '" alt="hotel" title="Your Hotel" style="height:100px;width:100px;object-fit: cover;margin:auto;display:block"></div>'+
+
+        '<div style="float:left;margin-left:10px;max-width:140px">'+
+        '<div style="word-break:keep-all;display:block;font-size:15px"><b>'+filtered[i].name+'</b></div>'+
+
+        '<div style="margin:0px;margin-top:10px;padding:0px;">'+
+        'From $'+filtered[i].price+' per night.'+
+        '</div>'+
+
+        '<div style="margin:0px;margin-top:10px;padding:0px;">'+
+        stars+
+        '</div>'+
+
+        '</div>'+
+        '</div>'+
+
+        '<div width="100px" style="display:block;padding:0px;margin-top:10px;text-align:center;">'+
+        '<button id="mapview_detailsbutton_'+i+'" style="margin:auto;">Details</button>'+
+        '</div>'
+      );
+
+      infowindow.open(map, this);
+
+      let buttonDetails = '#mapview_detailsbutton_' + i;
+      $(buttonDetails).click(function() {
+        hoteldetailsMarker(filtered[i]);
+      });
+
+    });
+
+    // Add to markers array
+    markers.push(marker);
+  }
 }
 
 function includeHTML() {
